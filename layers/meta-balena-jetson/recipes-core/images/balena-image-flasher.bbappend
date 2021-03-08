@@ -1,6 +1,6 @@
-include resin-image.inc
+include balena-image.inc
 
-RESIN_BOOT_PARTITION_FILES_append = " extlinux.conf_flasher:/extlinux/extlinux.conf"
+BALENA_BOOT_PARTITION_FILES_append = " extlinux.conf_flasher:/extlinux/extlinux.conf"
 
 # Switch extlinux.conf to the flasher one
 add_extlinux_to_flasher_rootfs() {

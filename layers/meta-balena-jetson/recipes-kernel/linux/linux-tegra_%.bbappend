@@ -13,46 +13,46 @@ SRC_URI_append = " \
     file://tegra186-tx2-cti-ASG916.dtb \
     "
 
-RESIN_CONFIGS_append = " compat spi gamepad can tpg"
-RESIN_CONFIGS_remove = "brcmfmac"
+BALENA_CONFIGS_append = " compat spi gamepad can tpg"
+BALENA_CONFIGS_remove = "brcmfmac"
 
-RESIN_CONFIGS[compat] = " \
+BALENA_CONFIGS[compat] = " \
     CONFIG_COMPAT=y \
     "
 
-RESIN_CONFIGS[spi] = " \
+BALENA_CONFIGS[spi] = " \
 		CONFIG_SPI=y \
 		CONFIG_SPI_MASTER=y \
 		CONFIG_SPI_SPIDEV=m \
 		"
-RESIN_CONFIGS_DEPS[spi] = " \
+BALENA_CONFIGS_DEPS[spi] = " \
 		CONFIG_QSPI_TEGRA186=y \
 		CONFIG_SPI_TEGRA144=y \
 		"
 
-RESIN_CONFIGS[gamepad] = " \
+BALENA_CONFIGS[gamepad] = " \
 		CONFIG_JOYSTICK_XPAD=m \
 		"
-RESIN_CONFIGS_DEPS[gamepad] = " \
+BALENA_CONFIGS_DEPS[gamepad] = " \
 		CONFIG_INPUT_JOYSTICK=y \
 		CONFIG_USB_ARCH_HAS_HCD=y \
 		"
 
-RESIN_CONFIGS_append_skx2 = " cdc_acm wdm"
+BALENA_CONFIGS_append_skx2 = " cdc_acm wdm"
 
-RESIN_CONFIGS_DEPS[cdc_acm] = "CONFIG_TTY=y"
-RESIN_CONFIGS[cdc_acm] = "CONFIG_USB_ACM=m"
+BALENA_CONFIGS_DEPS[cdc_acm] = "CONFIG_TTY=y"
+BALENA_CONFIGS[cdc_acm] = "CONFIG_USB_ACM=m"
 
-RESIN_CONFIGS[wdm] = "CONFIG_USB_WDM=m"
+BALENA_CONFIGS[wdm] = "CONFIG_USB_WDM=m"
 
-RESIN_CONFIGS_append_m2pcie-tx2 = " gasket"
+BALENA_CONFIGS_append_m2pcie-tx2 = " gasket"
 
-RESIN_CONFIGS[gasket] = " \
+BALENA_CONFIGS[gasket] = " \
         CONFIG_STAGING_GASKET_FRAMEWORK=m \
         CONFIG_STAGING_APEX_DRIVER=m \
         "
 
-RESIN_CONFIGS[can] = " \
+BALENA_CONFIGS[can] = " \
 		CONFIG_CAN=m \
 		CONFIG_CAN_RAW=m \
 		CONFIG_CAN_DEV=m \
@@ -60,9 +60,9 @@ RESIN_CONFIGS[can] = " \
 		CONFIG_MTTCAN_IVC=m \
 "
 
-RESIN_CONFIGS_append_srd3-tx2 = " tpg"
+BALENA_CONFIGS_append_srd3-tx2 = " tpg"
 
-RESIN_CONFIGS[tpg] = " \
+BALENA_CONFIGS[tpg] = " \
 		CONFIG_VIDEO_TEGRA_VI_TPG=m \
 "
 

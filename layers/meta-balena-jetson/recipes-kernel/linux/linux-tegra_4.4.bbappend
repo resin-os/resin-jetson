@@ -6,14 +6,14 @@ SRC_URI_append = " \
 	file://0003-m_ttcan.c-Rename-to-m_ttcan_ext.c.patch \
 	"
 
-RESIN_CONFIGS_append = " uvc"
+BALENA_CONFIGS_append = " uvc"
 
-RESIN_CONFIGS[uvc] = " \
+BALENA_CONFIGS[uvc] = " \
 		CONFIG_USB_VIDEO_CLASS=m \
 		CONFIG_USB_VIDEO_CLASS_INPUT_EVDEV=y \
 		"
 
-RESIN_CONFIGS_DEPS[uvc] = " \
+BALENA_CONFIGS_DEPS[uvc] = " \
 		CONFIG_MEDIA_CAMERA_SUPPORT=y \
 		CONFIG_VIDEO_V4L2_SUBDEV_API=y \
 		CONFIG_VIDEO_V4L2=m \
@@ -26,13 +26,13 @@ RESIN_CONFIGS_DEPS[uvc] = " \
 		CONFIG_SND_USB_AUDIO=m \
 		"
 
-RESIN_CONFIGS_append = " egalax"
+BALENA_CONFIGS_append = " egalax"
 
-RESIN_CONFIGS[egalax] = " \
+BALENA_CONFIGS[egalax] = " \
 		CONFIG_TOUCHSCREEN_EGALAX=m \
 		"
 
-RESIN_CONFIGS_append = " serial"
-RESIN_CONFIGS[serial] = " \
+BALENA_CONFIGS_append = " serial"
+BALENA_CONFIGS[serial] = " \
 		CONFIG_USB_SERIAL_GENERIC=y \
 		"

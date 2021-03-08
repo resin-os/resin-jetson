@@ -4,8 +4,8 @@ UBOOT_KCONFIG_SUPPORT = "1"
 
 inherit resin-u-boot
 
-RESIN_BOOT_PART = "0xC"
-RESIN_DEFAULT_ROOT_PART = "0xD"
+BALENA_BOOT_PART = "0xC"
+BALENA_DEFAULT_ROOT_PART = "0xD"
 
 SRC_URI_append = " \
   file://0004-u-boot-Increase-env-size.patch \

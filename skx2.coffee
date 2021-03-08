@@ -37,10 +37,10 @@ module.exports =
 
 	yocto:
 		machine: 'skx2'
-		image: 'resin-image-flasher'
-		fstype: 'resinos-img'
+		image: 'balena-image-flasher'
+		fstype: 'balenaos-img'
 		version: 'yocto-pyro'
-		deployArtifact: 'resin-image-flasher-skx2.resinos-img'
+		deployArtifact: 'balena-image-flasher-skx2.balenaos-img'
 		compressed: true
 
 	options: [ networkOptions.group ]
